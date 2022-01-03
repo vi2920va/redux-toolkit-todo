@@ -1,25 +1,15 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import todos from './todos';
 
-interface Todo {
-  id: string;
-  text: string;
-}
+const rootReducer = combineReducers({
+  todos: todos.reducer,
+});
 
-const initialState: Todo[] = [];
+const store = configureStore({
+  reducer: rootReducer,
+});
 
-const todoSlice = createSlice({
-  name: 'todos',
-  initialState,
-  reducers: {
-    addTodo: (state, action) => {
-      state.push({ id: Date.now().toString(), text: action.payload });
-    }
-  }
-})
-
-export const store = configureStore({ reducer: todoSlice.reducer });
-
-
-export const { addTodo } = todoSlice.actions;
+export type AppDispatch = typeof store.dispatch;
+export type AppState = ReturnType<typeof rootReducer>;
 
 export default store;
