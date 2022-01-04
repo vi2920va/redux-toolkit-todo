@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { AppState } from '../../store/store';
 import Form from '../Form/Form';
+import TodoItem from './../TodoItem/TodoItem';
 import styled from 'styled-components';
 
 
@@ -12,6 +13,9 @@ const TodoList = () => {
       <Wrapper>
         <Title>Todo List</Title>
         <Explanation>Get things done. one item a time.</Explanation>
+        <List>
+          {todos.map((todo, index) => <TodoItem key={todo.id} index={index} todo={todo} />)}
+        </List>
         <Form />
       </Wrapper>
     </Container>
@@ -45,4 +49,8 @@ const Title = styled.h1`
 const Explanation = styled.span`
     display: block;
     font-size: 0.875rem;
-` 
+`
+const List = styled.ul`
+    margin-top: 2.6rem;
+
+`;

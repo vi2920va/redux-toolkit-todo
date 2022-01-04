@@ -1,16 +1,16 @@
-# Redux ToolKit Todo
+# RTK TypeScript Todo
 
 ![codeTodo](https://i.postimg.cc/13QdQd4c/screencapture-localhost-3002-2021-10-03-22-07-01.png)
 
-Rudux ToolKit을 사용한 간단한 투두 리스트.
+RTK + Typescript 적용한 심플 투두 리스트.
 
 ## 적용기술
 
-- React(HOOK)
-- Redux & Redux HOOKS
+- React(hook)
 - Redux-Toolkit
+- Styled-compoents
+- Styled-reset
 - TypeScript
-- Styled-Compoents
 
 ## 구현 기능
 

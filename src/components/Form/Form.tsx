@@ -21,7 +21,6 @@ const Form = () => {
   return (
     <AddForm onSubmit={handleFormSubmit}>
       <h2>Add to the todo list</h2>
-
       <AddInput
         type="text"
         aria-label="add input"
@@ -42,10 +41,6 @@ const AddForm = styled.form`
 const AddInput = styled.input`
     width: 78%;
     height: 2.2rem;
-    border: 0;
-    :focus{
-      outline: 0;
-    }
 `;
 
 const AddBtn = styled.button`
@@ -53,8 +48,6 @@ const AddBtn = styled.button`
     height: 2.2rem;
     margin-left: 0.5rem;
     border: 1px solid rgba(255, 255, 255, .3);
-    color: #888;
-    cursor: pointer;
-    
+    color: #fff;
 `;
 
